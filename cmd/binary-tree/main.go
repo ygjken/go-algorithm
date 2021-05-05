@@ -40,4 +40,8 @@ func main() {
 		fmt.Printf("\n")
 	}
 
+	// print tree height
+	h := binarytree.TreeHeight(tree)
+	fmt.Println("tree height > ", h)
+
 }

@@ -121,3 +121,19 @@ func TreeDelete(T *Node, z *Node) *Node {
 
 	return r
 }
+
+func TreeHeight(x *Node) int {
+	var h, h_tmp int
+
+	h = 0
+	if x != nil {
+		h = TreeHeight(x.Left)
+		h_tmp = TreeHeight(x.Right)
+		if h_tmp > h {
+			h = h_tmp
+		}
+		h++
+	}
+
+	return h
+}
